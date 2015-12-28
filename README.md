@@ -6,11 +6,11 @@ See my blog post at [blog.otoro.net](http://blog.otoro.net/2015/12/28/recurrent-
 
 Example Training Sketches (20 randomly chosen out of 11000 [KanjiVG](http://kanjivg.tagaini.net/) dataset):
 
-![Example Training Sketches](http://blog.otoro.net/wp-content/uploads/sites/2/2015/12/training1.svg)
+![Example Training Sketches](https://cdn.rawgit.com/hardmaru/sketch-rnn/master/example/training.svg)
 
 Generated Sketches (Temperature = 0.1):
 
-![Generated Sketches](http://blog.otoro.net/wp-content/uploads/sites/2/2015/12/output.svg)
+![Generated Sketches](https://cdn.rawgit.com/hardmaru/sketch-rnn/master/example/output.svg)
 
 # Basic Usage
 
@@ -44,7 +44,7 @@ loader = SketchLoader(data_filename = 'tuberlin')
 draw_stroke_color(random.choice(loader.raw_data))
 ```
 
-![Example Elephant from TU Berlin database](http://blog.otoro.net/wp-content/uploads/sites/2/2015/12/elephant.svg)
+![Example Elephant from TU Berlin database](https://cdn.rawgit.com/hardmaru/sketch-rnn/master/example/elephant.svg)
 
 For this algorithm to work, I recommend the data be similar in size, and similar in style / content.  For examples if we have bananas, buildings, elephants, rockets, insects of varying shapes and sizes, it would most likely just produce gibberish.
 
@@ -82,25 +82,25 @@ It should be straight forward to examine `sample.py` to be able to generate sket
 
 ## More useful links, pointers, datasets
 
-Alex Graves' [paper](http://arxiv.org/abs/1308.0850) on text sequence and handwriting generation.
+*Alex Graves' [paper](http://arxiv.org/abs/1308.0850) on text sequence and handwriting generation.
 
-Karpathy's [char-rnn](https://github.com/karpathy/char-rnn) tool, motivation for creating sketch-rnn.
+*Karpathy's [char-rnn](https://github.com/karpathy/char-rnn) tool, motivation for creating sketch-rnn.
 
-[KanjiVG](http://kanjivg.tagaini.net/).  Fantastic Database of Kanji Stroke Order.
+*[KanjiVG](http://kanjivg.tagaini.net/).  Fantastic Database of Kanji Stroke Order.
 
-Very clean TensorFlow implementation of [char-rnn](https://github.com/sherjilozair/char-rnn-tensorflow), written by [Sherjil Ozair](https://github.com/sherjilozair), where I based the skeleton of this code off of.
+*Very clean TensorFlow implementation of [char-rnn](https://github.com/sherjilozair/char-rnn-tensorflow), written by [Sherjil Ozair](https://github.com/sherjilozair), where I based the skeleton of this code off of.
 
-[svg.path](https://pypi.python.org/pypi/svg.path).  I used this well written tool to help convert path data into line data.
+*[svg.path](https://pypi.python.org/pypi/svg.path).  I used this well written tool to help convert path data into line data.
 
-CASIA Online and Offline Chinese [Handwriting Databases](http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html).  Download stroke data for written cursive Simplifed Chinese.
+*CASIA Online and Offline Chinese [Handwriting Databases](http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html).  Download stroke data for written cursive Simplifed Chinese.
 
-How Do Humans Sketch Objects?  [TU Berlin Sketch Database](http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/).  Would be interesting to extend this work and generate random vector art of real life stuff.
+*How Do Humans Sketch Objects?  [TU Berlin Sketch Database](http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/).  Would be interesting to extend this work and generate random vector art of real life stuff.
 
-Doraemon in [SVG format](http://yylam.blogspot.hk/2012/04/doraemon-in-svg-format-doraemonsvg.html).
+*Doraemon in [SVG format](http://yylam.blogspot.hk/2012/04/doraemon-in-svg-format-doraemonsvg.html).
 
-[Potrace](https://en.wikipedia.org/wiki/Potrace).  Beautiful looking tool to convert raster bitmapped drawings into SVG for potentially scaling up resolution of drawings.  Could potentially apply this to generate large amounts of training data.
+*[Potrace](https://en.wikipedia.org/wiki/Potrace).  Beautiful looking tool to convert raster bitmapped drawings into SVG for potentially scaling up resolution of drawings.  Could potentially apply this to generate large amounts of training data.
 
-[Rendering Belzier Curve Codes](http://rosettacode.org/wiki/Bitmap/B%C3%A9zier_curves/Cubic).  I used this very useful code to convert Belzier curves into line segments.
+*[Rendering Belzier Curve Codes](http://rosettacode.org/wiki/Bitmap/B%C3%A9zier_curves/Cubic).  I used this very useful code to convert Belzier curves into line segments.
 
 
 # License
