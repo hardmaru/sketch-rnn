@@ -47,7 +47,11 @@ def main():
 def train(args):
   data_loader = SketchLoader(args.batch_size, args.seq_length, args.data_scale, args.dataset_name)
 
-  with open(os.path.join('save', args.dataset_name, 'config.pkl'), 'w') as f:
+  dirname = os.path.join('save', args.dataset_name)
+  if not os.path.exists(dirname):
+    os.makedirs(dirname)
+
+  with open(os.path.join(dirname, 'config.pkl'), 'w') as f:
       cPickle.dump(args, f)
 
   model = Model(args)
