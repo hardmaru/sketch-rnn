@@ -1,0 +1,17 @@
+decorator==4.0.9
+ipython==4.1.2
+ipython-genutils==0.1.0
+numpy==1.10.4
+path.py==8.1.2
+pexpect==4.0.1
+pickleshare==0.6
+protobuf==3.0.0b2
+ptyprocess==0.5.1
+pyparsing==2.1.0
+simplegeneric==0.8.1
+six==1.10.0
+svgwrite==1.1.6
+https://storage.googleapis.com/tensorflow/mac/tensorflow-0.7.1-cp27-none-any.whl
+traitlets==4.2.1
+wheel==0.29.0
+wsgiref==0.1.2

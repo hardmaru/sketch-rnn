@@ -30,9 +30,9 @@ svg.path
 
 The training data is located inside the `data` subdirectory.  In this repo, I've included `kanji.cpkl` which is a preprocessed array of KanjiVG characters.
 
-To add a new set of training data, for example, from the [TU Berlin Sketch Database](http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/), you have to create a subdirectory, say `tuberlin` inside the `data` directory, and in additionl create a directory of the same name in the `save` directory.  So you end up with `data/tuberlin/` and `save/tuberlin`, where `tuberlin` is defined as a name field for flags in the training and sample programs later on.  `save/tuberlin` will contain the check-pointed trained models later on.
+To add a new set of training data, for example, from the [TU Berlin Sketch Database](http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/), you have to create a subdirectory, say `tuberlin` inside the `data` directory, and in addition create a directory of the same name in the `save` directory.  So you end up with `data/tuberlin/` and `save/tuberlin`, where `tuberlin` is defined as a name field for flags in the training and sample programs later on.  `save/tuberlin` will contain the check-pointed trained models later on.
 
-Now, put a large collection .svg files into `data/tuberlin/`.  You can even create subdirectories within `data/tuberlin/` and it will work, as the `SketchLoader` class will scan the entire subdirectory tree.
+Now, put a large collection of .svg files into `data/tuberlin/`.  You can even create subdirectories within `data/tuberlin/` and it will work, as the `SketchLoader` class will scan the entire subdirectory tree.
 
 Currently, `sketch-rnn` only processes `path` elements inside svg files, and within the `path` elements, it only cares about lines and belzier curves at the moment.  I found this sufficient to handle TUBerlin and KanjiVG databases, although it wouldn't be difficult to extent to process the other curve elements, even shape elements in the future.
 
@@ -57,21 +57,21 @@ A number of flags can be set for training if you wish to experiment with the par
 The default values are in `train.py`
 
 ```
---rnn_size RNN_SIZE             size of RNN hidden state
---num_layers NUM_LAYERS         number of layers in the RNN
---model MODEL                   rnn, gru, or lstm
---batch_size BATCH_SIZE         minibatch size
---seq_length SEQ_LENGTH         RNN sequence length
---num_epochs NUM_EPOCHS         number of epochs
---save_every SAVE_EVERY         save frequency
---grad_clip GRAD_CLIP           clip gradients at this value
---learning_rate LEARNING_RATE   learning rate
---decay_rate DECAY_RATE         decay rate after each epoch (adam is used)
---num_mixture NUM_MIXTURE       number of gaussian mixtures
---data_scale DATA_SCALE         factor to scale raw data down by
---keep_prob KEEP_PROB           dropout keep probability
---stroke_importance_factor F    gradient boosting of sketch-finish event
---dataset_name DATASET_NAME     name of directory containing training data
+--rnn_size RNN_SIZE             size of RNN hidden state (256)
+--num_layers NUM_LAYERS         number of layers in the RNN (2)
+--model MODEL                   rnn, gru, or lstm (lstm)
+--batch_size BATCH_SIZE         minibatch size (100)
+--seq_length SEQ_LENGTH         RNN sequence length (300)
+--num_epochs NUM_EPOCHS         number of epochs (500)
+--save_every SAVE_EVERY         save frequency (250)
+--grad_clip GRAD_CLIP           clip gradients at this value (5.0)
+--learning_rate LEARNING_RATE   learning rate (0.005)
+--decay_rate DECAY_RATE         decay rate after each epoch (adam is used) (0.99)
+--num_mixture NUM_MIXTURE       number of gaussian mixtures (24)
+--data_scale DATA_SCALE         factor to scale raw data down by (15.0)
+--keep_prob KEEP_PROB           dropout keep probability (0.8)
+--stroke_importance_factor F    gradient boosting of sketch-finish event (200.0)
+--dataset_name DATASET_NAME     name of directory containing training data (kanji)
 ```
 
 ## Sampling a Sketch
