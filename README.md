@@ -12,6 +12,10 @@ Generated Sketches (Temperature = 0.1):
 
 ![Generated Sketches](https://cdn.rawgit.com/hardmaru/sketch-rnn/master/example/output.svg)
 
+# Depreciated
+
+This version of sketch-rnn has been depreciated. An updated version will be released soon.
+
 # Basic Usage
 
 I tested the implementation on TensorFlow 0.50.  I also used the following libraries to help:
