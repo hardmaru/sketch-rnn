@@ -1,6 +1,6 @@
 # Depreciated
 
-This version of sketch-rnn has been depreciated. Please see an updated version of [sketch-rnn](https://github.com/tensorflow/magenta-staging/blob/sketch_rnn/magenta/models/sketch_rnn/README.md), which is a full generative model for vector drawings.
+This version of sketch-rnn has been depreciated. Please see an updated version of [sketch-rnn](https://github.com/tensorflow/magenta/blob/master/magenta/models/sketch_rnn/README.md), which is a full generative model for vector drawings.
 
 # sketch-rnn
 
