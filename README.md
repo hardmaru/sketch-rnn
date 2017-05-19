@@ -1,3 +1,7 @@
+# Depreciated
+
+This version of sketch-rnn has been depreciated. Please see an updated version of [sketch-rnn](https://github.com/tensorflow/magenta-staging/blob/sketch_rnn/magenta/models/sketch_rnn/README.md), which is a full generative model for vector drawings.
+
 # sketch-rnn
 
 Implementation multi-layer recurrent neural network (RNN, LSTM GRU) used to model and generate sketches stored in .svg vector graphic files.  The methodology used is to combine Mixture Density Networks with a RNN, along with modelling dynamic end-of-stroke and end-of-content probabilities learned from a large corpus of similar .svg files, to generate drawings that is simlar to the vector training data.
@@ -11,10 +15,6 @@ Example Training Sketches (20 randomly chosen out of 11000 [KanjiVG](http://kanj
 Generated Sketches (Temperature = 0.1):
 
 ![Generated Sketches](https://cdn.rawgit.com/hardmaru/sketch-rnn/master/example/output.svg)
-
-# Depreciated
-
-This version of sketch-rnn has been depreciated. An updated version will be released soon.
 
 # Basic Usage
 
