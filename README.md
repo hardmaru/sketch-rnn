@@ -18,17 +18,7 @@ Generated Sketches (Temperature = 0.1):
 
 # Basic Usage
 
-I tested the implementation on TensorFlow 0.50.  I also used the following libraries to help:
-
-```
-svgwrite
-IPython.display.SVG
-IPython.display.display
-xml.etree.ElementTree
-argparse
-cPickle
-svg.path
-```
+I tested the implementation on TensorFlow 0.50.  I also used the following libraries to help``
 
 ## Loading in Training Data
 
