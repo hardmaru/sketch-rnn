@@ -18,21 +18,8 @@ Generated Sketches (Temperature = 0.1):
 
 # Basic Usage
 
-I tested the implementation on TensorFlow 0.50.  I also used the following libraries to help:
+I tested the implementation on TensorFlow 0.50.  I also used the following libraries to help``
 
-```
-svgwrite
-IPython.display.SVG
-IPython.display.display
-xml.etree.ElementTree
-argparse
-cPickle
-svg.path
-```
-
-## Loading in Training Data
-
-The training data is located inside the `data` subdirectory.  In this repo, I've included `kanji.cpkl` which is a preprocessed array of KanjiVG characters.
 
 To add a new set of training data, for example, from the [TU Berlin Sketch Database](http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/), you have to create a subdirectory, say `tuberlin` inside the `data` directory, and in addition create a directory of the same name in the `save` directory.  So you end up with `data/tuberlin/` and `save/tuberlin`, where `tuberlin` is defined as a name field for flags in the training and sample programs later on.  `save/tuberlin` will contain the check-pointed trained models later on.
 
